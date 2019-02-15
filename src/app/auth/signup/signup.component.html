@@ -1,0 +1,24 @@
+<div class="login-form">
+  <form fxLayout="column" fxLayoutAlign="center center" (ngSubmit)="onsubmit(f)" #f="ngForm" fxLayoutGap="10px">
+
+    <mat-form-field>
+      <input type="email" matInput appearance="standard" placeholder="Your Email" ngModel name="email" email required>
+    </mat-form-field>
+
+
+    <mat-form-field>
+      <input type="password" placeholder="Password" matInput ngModel name="password" required minlength="6" #pwd="ngModel">
+      <mat-hint align="end"> {{pwd.value?.length}} / 6</mat-hint>
+    </mat-form-field>
+    <mat-form-field>
+
+      <input matInput placeholder="Birth Date" [matDatepicker]="picker" [max]="maxDate">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-checkbox name="Agreed" required ngModel>Agree to terms and conditions</mat-checkbox>
+
+    <button type="submit" mat-raised-button color="primary" [disabled] ="f.invalid">Submit</button>
+  </form>
+</div>

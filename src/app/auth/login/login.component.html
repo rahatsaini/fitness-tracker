@@ -1,0 +1,17 @@
+<div>
+    <form  (ngSubmit)="onsubmit()"  [formGroup]="loginForm" fxLayoutAlign="center center" fxLayout="column" >
+        <mat-form-field>
+            <input matInput required ngModel placeholder="Email" formControlName="email">
+        </mat-form-field>
+        <mat-error></mat-error>
+        <mat-form-field>
+                <input matInput required ngModel placeholder="Passowrd" formControlName="password">
+        </mat-form-field>
+        
+        <button type="submit" mat-raised-button   [disabled]="loginForm.invalid" color="primary">Log in</button>
+        <!-- <button type="submit" mat-raised-button  color="warm" >
+            Sign up
+        </button> -->
+    
+    </form>
+</div>

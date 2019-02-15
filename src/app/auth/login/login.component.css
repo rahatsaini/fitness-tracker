@@ -1,0 +1,16 @@
+.login-form{
+    border:1;
+    border-style: groove;
+    height:300px;
+    width:auto;
+    border-radius:250Px;
+    
+    padding: 20px; 
+    
+    height: 150px; 
+}
+
+mat-form-field {
+ width: 300px;
+
+}
