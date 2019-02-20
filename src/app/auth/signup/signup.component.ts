@@ -14,4 +14,12 @@ export class SignupComponent implements OnInit {
     this.maxDate.setFullYear(this.maxDate.getFullYear()-18);
   }
 
+
+
+  onsubmit(f){
+    console.log(f);
+  }
+
 }
+
+
