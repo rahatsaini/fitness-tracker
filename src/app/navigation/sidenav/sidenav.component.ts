@@ -22,6 +22,11 @@ export class SidenavComponent implements OnInit {
     })
   }
  
+ onlogout(){
+   this.onclose();
+   this.authService.logout();
+ }
+
   onclose(){
     this.CloseSideNav.emit();
     this.subscription.unsubscribe();
