@@ -17,7 +17,8 @@ import {FlexLayoutModule} from '@angular/flex-layout';
 import {ReactiveFormsModule} from '@angular/forms';
 import { HeaderComponent } from './navigation/header/header.component';
 import { SidenavComponent } from './navigation/sidenav/sidenav.component';
-
+import {StopTrainingComponent} from './training/currenttraining/stoptraining.component';
+import { AuthServce } from './auth/auth.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +30,8 @@ import { SidenavComponent } from './navigation/sidenav/sidenav.component';
     PasttrainingComponent,
     WelcomeComponent,
     HeaderComponent,
-    SidenavComponent
+    SidenavComponent,
+    StopTrainingComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +41,8 @@ import { SidenavComponent } from './navigation/sidenav/sidenav.component';
     FlexLayoutModule,
     FormsModule,ReactiveFormsModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [AuthServce],
+  bootstrap: [AppComponent],
+  entryComponents : [StopTrainingComponent]
 })
 export class AppModule { }
